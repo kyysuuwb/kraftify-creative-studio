@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kraftify: Creative Studio </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="javascript.js"></script>
+    </head>
+    <body>
+        <!------------------ navigation bar ------------------->
+        <div class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Kraftify: Creative Studio">
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products-list.html#digisetup">Digital Space</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showSetup(); return false;">Digital Setup</a></li>
+                            <li><a href="#" onclick="showPlanner(); return false;">Digital Planner</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="homeoffice.html">Home & Office</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="basket">
+                <p id="cartItemCount">0</p>
+                <a href="cart.html" id="viewDataBtn"><span class="material-symbols-outlined" id="basketicon">shopping_bag</span></a>
+            </div>
+        </div>
+        <!---------------------- digital setup ------------------------->
+        <div class="hide-con" id="digisetup">
+            <div class="digiprod-container">
+                <div class="banner2"></div>
+                <p class="banner-details2">digital setup</p>
+    
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp1.png" alt="Summer Crossing Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product1">
+                        <p class="wp-title">Summer Crossing Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 850.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #889950;">step onto the bridge alongside the shepherd, beneath the blooming summer sky &#127800</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        5 png files<br><br>
+                        • Summer Crossing (5971 x 3471)<br>
+                        • Summer Crossing Landscape Ver. (5971 x 3471)<br>
+                        • Summer Crossing Phone (2550 x 4181)<br>
+                        • Summer Crossing Landscape Phone Ver. (2550 x 4181)<br>                
+                        • Summer Crossing Ultrawide (8000 x 3471)<br>
+                        
+                    </div>
+                </div>
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp2.png" alt="Rural Life at Night Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product2">
+                        <p class="wp-title">Rural Life at Night Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 950.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #257ddb;">as the sun dips below the horizon, the stars comes to life in the darkening sky &#128171</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        2 jpg files<br><br>
+                        • Rural Life at Night (Moonlight Version) (8820 x 3038 px)<br>
+                        • Rural Life in Night (Aurora Version) (8820 x 3038 px)
+                        </p>    
+                    </div>
+                </div>
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp3.png" alt="Rural Life in Spring Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product3">
+                        <p class="wp-title">Rural Life in Spring Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 550.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #e29595;">imagine yourself living in the rural areas. quaint, slow living in the valley where life is simple &#127800</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        1 png file<br><br>
+                        • Rural Life in Spring (8820 x 3038 px)
+                        </p>    
+                    </div>
+                </div>
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp4.png" alt="Zen Flower Shop Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product4">
+                        <p class="wp-title">Zen Flower Shop Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 850.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #8fb45f;">relax at the zen flower shop &#127811</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        4 png files<br><br>
+                        • Zen Flower Shop (2550 x 4181)<br>
+                        • Zen Flower Shop Landscape Edition (2550 x 4181)<br>
+                        • Zen Flower Shop Laptop Edition (2550  ×  1610 px)<br>
+                        • Zen Flower Shop Ultra-Wide Edition (2550  ×  1092 px)
+                        </p>    
+                    </div>
+                </div>
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp5.png" alt="Rural Life in Winter Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product5">
+                        <p class="wp-title">Rural Life in Winter Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 850.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #8dadda;">imagine yourself living in the rural areas. quaint, slow living in the valley where life is simple &#9924</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        2 png files<br><br>
+                        • Rural Life in Winter (8820 x 3038 px)<br>
+                        • Rural Life in Winter Snowing Ver. (8820 x 3038 px)
+                        </p>    
+                    </div>
+                </div>
+                <div class="wallpaper-container">
+                    <div class="left-column">
+                        <img src="wp6.png" alt="Golden Meadows Digital Wallpaper">
+                    </div>
+                    <div class="right-column" id="product6">
+                        <p class="wp-title">Golden Meadows Digital Wallpaper</p>
+                        <p class="prod-price">&#8369 550.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details" style="color: #c7b155;">calm golden meadows on a summer day. the perfect summer wallpaper &#127774</p>
+                        <p class="prod-details2"> Includes:<br><br>
+                        1 png file<br><br>
+                        • Golden Meadows (3300 x 2550px)
+                        </p>    
+                    </div>
+                </div>
+                <hr>
+                <p class="end-tag">create your cozy digital setup for your home screens & desktops!</p>
+            </div>
+        </div>
+
+        <!--------------- digital planner ------------------>
+        <div class="hide-con" id="planner">
+            <div class="digiplanner-container">
+                <div class="banner3"><p class="banner-details3">digital planner</p></div>
+            <div id="wallpaper-container">
+                <div class="left-column">
+                    <img src="plannertn2.png" alt="2024 Cozyleigh Digital Planner">
+                    <img src="planner1.png">
+                    <img src="planner2.png">
+                    <img src="sticker1.png">
+                </div>
+                <div class="right-column" id="product7">
+                    <p class="wp-title">2024 Cozyleigh Digital Planner</p>
+                    <p class="prod-price">&#8369 1550.00</p>
+                    <div class="button">
+                        <button type="button" class="transferBtn">Add to cart</button>
+                    </div>
+                    <p class="note">All digital sales are final and non-refundable due to the nature of the product. If there is an issue with your order, feel free to email us!</p>
+                    <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                    <p class="prod-desc">Product Description</p>
+                    <p class="prod-details" style="font-size: 18px; font-weight: 700; text-align: center;">2024 DIGITAL PLANNER 📔 (compatible with iPads and Android tablets, just use your PDF Reader of choice)</p>
+                    <p class="prod-details3"><b>Includes:</b><br><br>
+                        ● 164 Pages, 1000+ Hyperlinks<br>
+                        ● Cozyleigh Themed Journal Covers<br>
+                        &nbsp; ○ Colors: Beige, Cream, Blush, Matcha, Forest, Midnight<br>
+                        &nbsp; ○ MUJI Inspired Journal Cover Design<br>
+                        ● Monday & Sunday Calendars<br>
+                        &nbsp; ○ both options available on all calendar pages<br>
+                        &nbsp; ○ monday & sunday yearly calendars, monthly calendars, weekly planners<br>
+                        ● Yearly, Monthly, Weekly & Daily Journal Pages<br>
+                        &nbsp; ○ Minimally Designed, App-Like Templates<br>
+                        &nbsp; ○ Dated Templates<br>
+                        ● Variety of Journal Sections<br>
+                        &nbsp; ○ Vision Board<br>
+                        &nbsp; ○ Wish List<br>
+                        &nbsp; ○ Goals<br>
+                        &nbsp; ○ Mood & Habits<br>
+                        &nbsp; ○ Gratitude Journal<br>
+                        ● Calendar Navigation Advanced Hyperlinks<br>
+                        &nbsp; ○ Easily navigate the Cozyleigh Digital Journal with our hyperlinks!<br> 
+                        &nbsp; ○ Our journal is minimally designed, with an app-like feel for a seamless user experience<br>
+                        &nbsp; ○ See product images for a walkthrough of hyperlinks<br>
+                        ● Customizable Layouts & Digital Stickers!<br>
+                        &nbsp; ○ Freely express yourself. Customize & Decorate your journal with our digital stickers<br>
+                        ● Cozyleigh Digital Stickers (200+ stickers in different colors & styles)<br>
+                        &nbsp; ○ Use Cozyleigh Digital Stickers to add structure, prompts, & organization to your journal<br>
+                        ● MySweetChubs Digital Stickers (Basic Seasonal Pack)<br>
+                        &nbsp; ○ Have fun with MySweetChubs' Digital Stickers to customize each month & season!<br>
+                        &nbsp; ○ Take inspiration from MySweetChubs journal spreads (see product images)<br><br>
+                        <b>File Type:</b><br><br>
+                        2024 Digital Journal: PDF<br>
+                        Digital Stickers: High Resolution PNGs            
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-------------- home & office ---------------->
+        <div class="home-prod">
+            <div class="hide-con" id="prod1">
+                <div class="prod-con">
+                    <div class="left-column">
+                        <img src="ms2.png" alt="Zen MagSafe Charger Stand">
+                    </div>
+                    <div class="right-column" id="product8">
+                        <p class="wp-title">Zen MagSafe Charger Stand</p>
+                        <p class="prod-price">&#8369 3,050.00</p>
+                        <div class="color-opt">
+                            <button type="button" class="whitebtn" value="White">White</button>
+                            <button type="button" class="pinkbtn" value="Pink">Pink</button>
+                            <button type="button" class="yellowbtn" value="Yellow">Yellow</button>
+                            <button type="button" class="greenbtn" value="Green">Green</button>
+                            <button type="button" class="bluebtn" value="Blue">Blue</button>
+                        </div>
+                        <div class="color-con">
+                            <label for="colordisplay" class="label">Color:</label>
+                            <input type="text" id="colordisplay" name="colordisplay" value="White" readonly>
+                        </div>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="note">This product is designed around Apple's MagSafe charger and the Apple ecosystem. 
+                            We can only guarantee compatibility with iPhones and iPhone accessories that are compatible with MagSafe.</p>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details">Inspired by the peaceful beauty of zen gardens, this innovative accessory is designed to create a soothing sanctuary for your phone while promoting a sense of calm and focus in your workspace.</p>
+                        <p class="prod-details2"> 
+                            <b>Materials:</b> Recycled corn-based plastic<br> 
+                            <b>Dimensions:</b> 155mm x 90mm x 100mm<br>
+                            <b>Included:</b> Magnetized Puck, Magnetized Stand, MagSafe Charger Pop-Out Tool<br>
+                            <b>Weight:</b> 10 oz<br>
+                        </p>    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hide-con" id="prod2">
+                <div class="prod-con">
+                    <div class="left-column">
+                        <img src="zenlighttn.png" alt="Zen Light">
+                    </div>
+                    <div class="right-column" id="product9">
+                        <p class="wp-title">Zen Light</p>
+                        <p class="prod-price">&#8369 10,150.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details">A modern twist on traditional Asian lanterns, the Zen Table Light Collection will instantly ground your space with a sense of calm and peace.<br><br>
+    
+                            📐 14"H x 6.25"W x 6.25"D<br>
+                            💡 Museum-grade dimmable LEDs<br>
+                            🌿 Made from plants</p><br>
+                        <p class="prod-details2"> 
+                            <b>Features:</b><br><br>
+                            <b>Cord length</b> 90" long. Switch is about 18" from the base of the product.<br><br>
+    
+                            <b>Care Instructions</b> Keep your light shining bright. Clean with a soft, moist towel. 
+                            To disinfect, dab a cloth in rubbing alcohol and wipe thoroughly.<br><br>
+    
+                            <b>Lighting</b> Area type of lighting. Versatile and bright. Can be used to illuminate an entire space. 
+                            8.5W E26 LED Bulb (90+ CRI, 850 Lumens, Soft-white)
+    
+                        </p>    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hide-con" id="prod3">
+                <div class="prod-con">
+                    <div class="left-column">
+                        <img src="mini3.png" alt="Zen Mini Light">
+                    </div>
+                    <div class="right-column" id="product10">
+                        <p class="wp-title">Zen Mini Light</p>
+                        <p class="prod-price">&#8369 8,150.00</p>
+                        <div class="button">
+                            <button type="button" class="transferBtn">Add to cart</button>
+                        </div>
+                        <p class="hr">• • • • • • • • • • • • • • • • • • • • • • • • • • • • • •</p>
+                        <p class="prod-desc">Product Description</p>
+                        <p class="prod-details">A modern twist on traditional Asian lanterns, the Zen Table Light Collection will instantly ground your space with a sense of calm and peace.<br><br>
+    
+                            📐 9"H x 5.25"W x 5.25"D<br>
+                            💡 Museum-grade dimmable LEDs<br>
+                            🌿 Made from plants</p><br>
+                        <p class="prod-details2"> 
+                            <b>Features:</b><br><br>
+                            <b>Cord length</b> 90" long. Switch is about 18" from the base of the product.<br><br>
+    
+                            <b>Care Instructions</b> Keep your light shining bright. Clean with a soft, moist towel. 
+                            To disinfect, dab a cloth in rubbing alcohol and wipe thoroughly.<br><br>
+    
+                            <b>Lighting</b> Area type of lighting. Versatile and bright. Can be used to illuminate an entire space. 
+                            8.5W E26 LED Bulb (90+ CRI, 850 Lumens, Soft-white)
+    
+                        </p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="socials">
+            <p class="credits">inspired by <i>cozyleigh studios</i></p>
+            <p class="vl"></p>
+            <a class="fa fa-instagram" href="https://www.instagram.com/cozyleigh.studios" target="_blank"></a>
+            <a class="fa fa-youtube-play" href="https://www.youtube.com/@maisyleigh" target="_blank"></a>
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </div>
+    <script type="text/javascript" src="javascript.js"></script>
+    </body>
+</html>
+        
+        

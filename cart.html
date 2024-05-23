@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kraftify: Creative Studio </title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="./javascript.js"></script>
+    </head>
+    <body>
+        <!------------------ navigation bar ------------------->
+        <div class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Kraftify: Creative Studio">
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products-list.html#digisetup">Digital Space</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products-list.html#digisetup">Digital Setup</a></li>
+                            <li><a href="products-list.html#planner">Digital Planner</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="homeoffice.html">Home & Office</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="basket">
+                <p id="cartItemCount">0</p>
+                <a href="cart.html" id="viewDataBtn"><span class="material-symbols-outlined" id="basketicon">shopping_bag</span></a>
+            </div>
+        </div>
+
+        <p class="shopcart">Shopping Cart</p>
+        <div class="table-container">
+            <table id="cart-table">
+                <tr>
+                    <th class="prod-des">Product</th>
+                    <th class="js-td">Price</th>
+                    <th class="js-td">Quantity</th>
+                    <th class="des-sub">Subtotal</th>
+                </tr>
+            </table>
+        </div>
+        <div id="productDetails"></div>
+        <div id="totalPrice"></div>
+
+        <div class="col hidden">
+            <div class="info-form">
+                <p class="confirm">Confirm Your Order</p>
+                <div class="cs-details">
+                    <label for="csname">Name:</label>
+                    <input type="text" name="csname" required>
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" required>
+                    <label for="contact">Contact no.:</label>
+                    <input type="text" name="contact" required>
+                    <label for="cash">Cash Given:</label>
+                    <input type="text" name="cash" class="cash" required>
+                    <label class="changelbl"></label>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="cont">Continue Shopping</a>
+        <center><button class="checkoutbtn" onclick="toggleInfoForm()">Checkout</button></center>
+
+        <div class="socials2">
+            <p class="credits">inspired by <i>cozyleigh studios</i></p>
+            <p class="vl"></p>
+            <a class="fa fa-instagram" href="https://www.instagram.com/cozyleigh.studios" target="_blank"></a>
+            <a class="fa fa-youtube-play" href="https://www.youtube.com/@maisyleigh" target="_blank"></a>
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </div>
+    <script type="text/javascript" src="javascript.js"></script>
+    <script>
+        let titles = JSON.parse(sessionStorage.getItem('productTitles')) || [];
+        let prices = JSON.parse(sessionStorage.getItem('productPrices')) || [];
+        let colors = JSON.parse(sessionStorage.getItem('productColors')) || [];
+        let quantities = Array(titles.length).fill(1);
+
+        function removeItem(index) {
+            titles.splice(index, 1);
+            prices.splice(index, 1);
+            colors.splice(index, 1);
+            quantities.splice(index, 1);
+            sessionStorage.setItem('productTitles', JSON.stringify(titles));
+            sessionStorage.setItem('productPrices', JSON.stringify(prices));
+            sessionStorage.setItem('productColors', JSON.stringify(colors));
+            sessionStorage.setItem('productQuantities', JSON.stringify(quantities));
+            displayProductDetails();
+            computeTotalPrice();
+            updateCartItemCount();
+        }
+        function decreaseQuantity(index) {
+            if (quantities[index] > 1) {
+                quantities[index]--;
+                sessionStorage.setItem('productQuantities', JSON.stringify(quantities));
+                displayProductDetails();
+                computeTotalPrice();
+            }
+        }
+        function increaseQuantity(index) {
+            if (quantities[index] < 5) {
+                quantities[index]++;
+                sessionStorage.setItem('productQuantities', JSON.stringify(quantities));
+                displayProductDetails();
+                computeTotalPrice();
+            } else {
+                alert('Maximum quantity reached (5 items).');
+            }
+        }
+        function numberWithCommas(number) {
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        function displayProductDetails() {
+            const productDetailsElement = document.getElementById('productDetails');
+            productDetailsElement.innerHTML = '';
+            let totalCartPrice = 0;
+
+            titles.forEach((title, index) => {
+            const color = colors[index];
+            const colorText = color ? ` (${color})` : ''; 
+            const subtotal = (parseFloat(prices[index].replace(/[^\d.]/g, '')) * quantities[index]).toFixed(2);
+            const formattedSubtotal = numberWithCommas(subtotal); 
+            totalCartPrice += parseFloat(subtotal);
+            productDetailsElement.innerHTML += `
+            <table class="js-table">
+                <tr>
+                    <td class="pname2"><p>${title}${colorText} <a class="removebtn" onclick="removeItem(${index})">Remove</a></p></td>
+                    <td class="js-td"><p>${prices[index]}</p></td>
+                    <td class="js-td">
+                        <div class="qty-con">
+                            <button type="button" onclick="decreaseQuantity(${index})">-</button>
+                            <label id="quantity" name="quantity">${quantities[index]}</label>
+                            <button type="button" onclick="increaseQuantity(${index})">+</button>
+                        </div
+                    </td>
+                    <td class="des-sub"><p>&#8369 ${formattedSubtotal}</p></td>
+                </tr>
+            </table>
+            `;
+            });
+
+            const totalPriceElement = document.getElementById('totalPrice');
+            const formattedTotalCartPrice = numberWithCommas(totalCartPrice.toFixed(2)); // Format total cart price with commas
+            totalPriceElement.innerHTML = `Total Price: &#8369 ${formattedTotalCartPrice}`;
+        }
+
+        function computeTotalPrice() {
+            const totalPriceElement = document.getElementById('totalPrice');
+            let total = 0;
+
+            for (let i = 0; i < prices.length; i++) {
+                const price = parseFloat(prices[i].replace(/[^\d.]/g, ''));
+                total += price * quantities[i];
+            }
+
+            const formattedTotal = numberWithCommas(total.toFixed(2));
+            totalPriceElement.innerHTML = `
+            <hr class="hr2">
+            <table class="total-con">
+            <tr>
+                <td>Total</td>
+                <td class="totalprice">&#8369 ${formattedTotal}</td>
+            </tr>
+            </table>
+            <hr class="hr2">`;
+        }
+
+        displayProductDetails();
+        computeTotalPrice();
+    </script>
+    </body>
+</html>
+        
+        
